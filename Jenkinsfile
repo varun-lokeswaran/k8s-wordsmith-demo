@@ -4,7 +4,12 @@ pipeline {
         KUBECONFIG = 'C:/Users/varun.l/.kube/config'
     }
     stages {
-        stage('Deliver') {
+        stage('Build') {
+            steps {
+                powershell 'docker-compose build'
+            }
+        }
+        stage('Deply to K8s Cluster') {
             steps {
                 powershell 'kubectl apply -f kube-deployment.yml'
             }

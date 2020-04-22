@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        any
-    }
+    agent any
     environment {
         KUBECONFIG = 'C:/Users/varun.l/.kube/config'
     }

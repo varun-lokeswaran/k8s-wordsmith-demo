@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                powershell 'docker-compose build'
+                powershell 'docker-compose build --no-cache'
             }
         }
         stage('Deply to K8s Cluster') {

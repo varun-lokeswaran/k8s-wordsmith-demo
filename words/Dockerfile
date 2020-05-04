@@ -1,5 +1,4 @@
 # BUILD
-ARG build_no
 FROM openjdk:8u171-jdk-alpine as build
 
 RUN MAVEN_VERSION=3.5.0 \

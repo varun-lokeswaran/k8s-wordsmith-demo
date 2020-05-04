@@ -1,17 +1,17 @@
 pipeline {
     agent any
-    environment {
-        KUBECONFIG = 'C:/Users/varun.l/.kube/config'
-    }
+    // environment {
+    //     KUBECONFIG = 'C:/Users/varun.l/.kube/config'
+    // }
     stages {
         stage('Build') {
             steps {
-                powershell 'docker-compose build'
+                sh 'docker-compose build'
             }
         }
-        stage('Deply to K8s Cluster') {
+        stage('Deploy to K8s Cluster') {
             steps {
-                powershell 'kubectl apply -f kube-deployment.yml'
+                sh 'kubectl apply -f kube-deployment.yml'
             }
         }
     }

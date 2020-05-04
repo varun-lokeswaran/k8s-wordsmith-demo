@@ -3,22 +3,16 @@ version: '3.3'
 services:
   db:
     build: db
-      args:
-        - build_no
-    image: varun-lokeswaran/k8s-wordsmith-db
+    image: varun-lokeswaran/k8s-wordsmith-db:${BUILD_NUMBER}
 
   words:
     build: words
-      args:
-        - build_no
-    image: varun-lokeswaran/k8s-wordsmith-api
+    image: varun-lokeswaran/k8s-wordsmith-api:${BUILD_NUMBER}
     deploy:
       replicas: 5
 
   web:
     build: web
-      args:
-        - build_no
-    image: varun-lokeswaran/k8s-wordsmith-web
+    image: varun-lokeswaran/k8s-wordsmith-web:${BUILD_NUMBER}
     ports:
      - "8080:80"

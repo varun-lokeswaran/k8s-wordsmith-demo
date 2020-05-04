@@ -6,12 +6,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker-compose build'
+                sh 'sudo docker-compose build'
             }
         }
         stage('Deploy to K8s Cluster') {
             steps {
-                sh 'kubectl apply -f kube-deployment.yml'
+                sh 'sudo kubectl apply -f kube-deployment.yml'
             }
         }
     }

@@ -1,8 +1,8 @@
 pipeline {
     agent any
-    // environment {
-    //     KUBECONFIG = 'C:/Users/varun.l/.kube/config'
-    // }
+     environment {
+         KUBECONFIG = '/home/.kube/config'
+     }
     stages {
         stage('Build') {
             steps {

@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'cat ~/my_password.txt | docker login --username varunlokeswaran --password-stdin'
+                sh 'cat ~/docker_password.txt | docker login --username varunlokeswaran --password-stdin'
                 sh 'docker-compose build'
                 sh 'docker-compose push'
             }

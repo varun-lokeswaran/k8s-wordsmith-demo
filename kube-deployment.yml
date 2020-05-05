@@ -30,8 +30,8 @@ spec:
     spec:
       containers:
       - name: db
-        image: varun-lokeswaran/k8s-wordsmith-db:latest
-        imagePullPolicy: IfNotPresent
+        image: varunlokeswaran/k8s-wordsmith-db:latest
+        #imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 5432
           name: db
@@ -69,8 +69,8 @@ spec:
     spec:
       containers:
       - name: words
-        image: varun-lokeswaran/k8s-wordsmith-api:latest
-        imagePullPolicy: IfNotPresent
+        image: varunlokeswaran/k8s-wordsmith-api:latest
+        #imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
           name: api
@@ -107,8 +107,8 @@ spec:
     spec:
       containers:
       - name: web
-        image: varun-lokeswaran/k8s-wordsmith-web:latest
-        imagePullPolicy: IfNotPresent
+        image: varunlokeswaran/k8s-wordsmith-web:latest
+        #imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
           name: words-web

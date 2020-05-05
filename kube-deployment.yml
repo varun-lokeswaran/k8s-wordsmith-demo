@@ -61,7 +61,7 @@ spec:
   selector:
     matchLabels:
       app: words-api
-  replicas: 5
+  replicas: 1
   template:
     metadata:
       labels:

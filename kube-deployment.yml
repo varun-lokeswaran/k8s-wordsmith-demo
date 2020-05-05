@@ -13,7 +13,7 @@ spec:
     app: words-db
   clusterIP: None
 ---
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: db
@@ -48,7 +48,7 @@ spec:
     app: words-api
   clusterIP: None
 ---
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: words
@@ -84,7 +84,7 @@ spec:
     app: words-web
   type: LoadBalancer
 ---
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: web

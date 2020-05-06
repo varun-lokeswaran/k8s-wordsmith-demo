@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Deploy to K8s Cluster') {
             steps {
-                sh 'kubectl apply -f kube-deployment.yml'
+                sh 'helm upgrade --set buildNumber=$BUILD_NUMBER k8s-wordsmith-demo ./helm-chart'
             }
         }
     }

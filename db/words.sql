@@ -3,24 +3,24 @@ CREATE TABLE verbs (word TEXT NOT NULL);
 CREATE TABLE adjectives (word TEXT NOT NULL);
 
 INSERT INTO nouns(word) VALUES
-  ('cloud'),
-  ('Naresh'),
-  ('gø language'),
   ('Varun'),
-  ('cøntainer'),
-  ('micrø-service'),
+  ('Naresh'),
+  ('Prince'),
+  ('Varun'),
+  ('Karthik'),
+  ('Varun'),
   ('Karthik'),
   ('Prince'),
-  ('gøpher'),
-  ('møby døck'),
+  ('Varun'),
+  ('Varun'),
   ('Suresh'),
-  ('bicycle'),
-  ('viking'),
+  ('Naresh'),
+  ('Karthik'),
   ('Sathish'),
-  ('fjørd'),
-  ('legø'),
-  ('flødebolle'),
-  ('smørrebrød');
+  ('Karthik'),
+  ('Prince'),
+  ('Varun'),
+  ('Dinesh');
 
 INSERT INTO verbs(word) VALUES
   ('will drink'),
